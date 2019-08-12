@@ -70,7 +70,7 @@ class App extends Component {
       { validHues.map(
         (value, index, array) => 
         <span key={index}>
-          <Button variant="contained" style={ {margin: 3, width: 225, backgroundColor:hueShade(value,300), color: ('black') }}>
+          <Button variant="contained" style={ {margin: 3, width: 225, backgroundColor:hueShade(value,300), color: ('black') }}> 
           Button #{index} {value} 
           </Button>
         </span>
