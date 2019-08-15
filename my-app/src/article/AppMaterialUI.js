@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { Typography } from '@material-ui/core';
+import { Paper, Typography } from '@material-ui/core';
 
 const HammerTop = (props) =>
-  <span style={{
+  <Typography color='primary' style={{
     textTransform: "uppercase",
-    color: 'royalblue',
     fontSize: '1.3rem',
-    display: 'block',
-    fontFamily: 'sans-serif'
-  }} >{props.children} {props.withBar && '|'}</span>
+    fontFamily: " 'Roboto', sans-serif",
+  }} >{props.children} {props.withBar && '|'}</Typography>
   ;
 
 const HammerBottom = (props) =>
@@ -18,20 +16,18 @@ const HammerBottom = (props) =>
   }}>{props.children}</span>;
 
 const Hammer = (props) =>
-  <h2 style={{ letterSpacing: '-0.02rem' }}>
+  <Typography variant='h5'>
     {props.children}
-  </h2>;
+  </Typography>;
 
 const Headline1 = (props) =>
-  <h1 style={{
-    fontSize: '6rem',
-    fontFamily: " 'Oswald', sans-serif",
-    lineHeight: '6rem',
-    letterSpacing: '-0.1rem',
+  <Typography variant='h1' style={{
+    fontFamily: " 'Oswald', 'Roboto', sans-serif",
+    lineHeight: '5.3rem',
     textTransform: 'uppercase',
-    marginTop: ' 1rem',
-    marginBottom: '1rem',
-  }}>{props.children}</h1>;
+    fontWeight: 'bold',
+    fontWeight: 700
+  }}>{props.children}</Typography>;
 
 const Headline2 = (props) =>
   <h3 style={{
@@ -42,40 +38,45 @@ const Headline2 = (props) =>
     fontFamily: "'Verdana', sans-serif",
   }}>{props.children}</h3>;
 
-const Slug = (props) =>
-  <div style={{
+const BylineKCStar = (props) => {
+  let { author, newspaper, children } = props;
+  return <div style={{
     margin: '1rem 0rem',
-    textAlign: 'right'
+    textAlign: 'right',
+    fontFamily: " 'Roboto', sans-serif",
   }}>
-    By{' '}
-    <cite style={{
-      fontSize: ' .8rem',
+    <Typography component='span' variant='body2'>By{' '}</Typography>
+    <Typography component='span' variant='body2'style={{
       textTransform: 'uppercase',
       fontWeight: 'bold',
-      fontStyle: 'normal',
-      fontFamily: 'sans-serif',
-    }}> {props.author}<br />
-    </cite>
-    <span style={{ fontStyle: 'italic' }}>
-      The Kansas City Star</span>
-    {props.children}
+    }}> {author || 'Staff'} 
+    </Typography>
+    <br/>
+    <Typography variant='subtitle2' style={{ fontStyle: 'italic' }}>
+      {newspaper || 'The Kansas City Star'}</Typography>
+    {children}
   </div>;
+}
 
-const Article = (props) => <article style={{
-  padding: '1rem',
-  width: '28rem',
-  border: '1px grey solid',
-  fontFamily: 'serif',
-}}>{props.children}</article>;
+const Article = (props) =>
+  <Paper elevation={4} style={{
+    fontFamily: " 'Roboto', sans-serif",
+    padding: '1rem',
+    width: '28rem',
+    border: '1px grey solid',
+    fontFamily: 'serif',
+  }}>{props.children}</Paper>;
 
 const ArticleBody = (props) =>
-  <div style={{ textAlign: 'justify' }}>
-    {props.children} </div>;
+  <Typography variant='body2' align='justify' style={{
+    fontFamily: " 'Roboto', sans-serif"
+  }}>
+    {props.children} </Typography>;
 
 class App extends Component {
   render() {
     return (<>
-      <Typography variant='h1'>KC Star article</Typography>
+      <Typography gutterBottom variant='h1'>KC Star article</Typography>
       <Article >
         <Hammer>
           <HammerTop withBar>Border War Continues</HammerTop>
@@ -84,9 +85,9 @@ class App extends Component {
         <Headline1>Kansas Prevails In Bid for AMC</Headline1>
         <Headline2>Longtime downtown company is going to new $30 million building in southern Leawood's Park Place.</Headline2>
 
-        <Slug author='Kevin Collison'>
+        <BylineKCStar author='Kevin Collison'>
           {/* <div>Special text</div> */}
-        </Slug>
+        </BylineKCStar>
 
         <ArticleBody>
           <p>AMC Entertainment lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis impedit alias, a natus id aperiam magnam velit maxime nulla autem. Neque aliquam tenetur dolorum magnam non dolores fugit ullam illo!</p>
