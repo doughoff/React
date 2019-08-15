@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Typography } from '@material-ui/core';
 
 const HammerTop = (props) =>
-  <h2>
     <span style={{
       textTransform: "uppercase",
       color: 'royalblue',
@@ -10,8 +9,7 @@ const HammerTop = (props) =>
       display: 'block',
       fontFamily: 'sans-serif'
     }} >{props.children} {props.withBar && '|'}</span>
-
-  </h2>;
+;
 
 const HammerBottom = (props) => <span class='bottom'>{props.children}</span>;
 
@@ -32,6 +30,7 @@ const Headline1 = (props) => <h1 style={{
 
 const Headline2 = (props) => <h3>{props.children}</h3>;
 
+const Slug = (props) =>  <cite class='slug'>Kevin Collison<br /></cite>;
 const Article = (props) => <article style={{
   padding: '1rem',
   width: '22rem',
@@ -48,12 +47,9 @@ class App extends Component {
           <HammerTop withBar>Border War Continues</HammerTop>
           <HammerBottom>Tax incentives trump tradition</HammerBottom>
         </Hammer>
-
         <Headline1>Kansas Prevails In Bid for AMC</Headline1>
         <Headline2>Longtime downtown company is going to new $30 million building in southern Leawood's Park Place.</Headline2>
-
-
-        <cite class='slug'>Kevin Collison<br /></cite>
+        <Slug />
 
         <div class='body'>
           <p>AMC Entertainment lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis impedit alias, a natus id aperiam magnam velit maxime nulla autem. Neque aliquam tenetur dolorum magnam non dolores fugit ullam illo!</p>
