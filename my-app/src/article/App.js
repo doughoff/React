@@ -37,11 +37,26 @@ const Headline2 = (props) =>
   <h3>{props.children}</h3>;
 
 const Slug = (props) =>
-  <cite class='slug'>Kevin Collison<br /></cite>;
+  <div style={{
+    margin: '1rem 0rem',
+    textAlign: 'right'
+  }}>
+    By{' '}
+    <cite style={{
+      fontSize: ' .8rem',
+      textTransform: 'uppercase',
+      fontWeight: 'bold',
+      fontStyle: 'normal',
+      fontFamily: 'sans-serif',
+    }}> {props.children}<br />
+    </cite>
+    <span style={{ fontStyle: 'italic' }}>
+      The Kansas City Star</span>
+  </div>;
 
 const Article = (props) => <article style={{
   padding: '1rem',
-  width: '22rem',
+  width: '28rem',
   border: '1px grey solid',
   fontFamily: 'serif',
 }}>{props.children}</article>;
@@ -60,7 +75,8 @@ class App extends Component {
         </Hammer>
         <Headline1>Kansas Prevails In Bid for AMC</Headline1>
         <Headline2>Longtime downtown company is going to new $30 million building in southern Leawood's Park Place.</Headline2>
-        <Slug />
+
+        <Slug>Kevin Collison</Slug>
 
         <ArticleBody>
           <p>AMC Entertainment lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis impedit alias, a natus id aperiam magnam velit maxime nulla autem. Neque aliquam tenetur dolorum magnam non dolores fugit ullam illo!</p>
