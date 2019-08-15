@@ -22,20 +22,21 @@ const Hammer = (props) =>
     {props.children}
   </h2>;
 
-const Headline1 = (props) => <h1 style={{
-  fontSize: '6rem',
-  fontFamily: " 'Oswald', sans-serif",
-  lineHeight: '6rem',
-  letterSpacing: '-0.1rem',
-  textTransform: 'uppercase',
-  marginTop: ' 1rem',
-  marginBottom: '1rem',
-}}>{props.children}</h1>;
+const Headline1 = (props) =>
+  <h1 style={{
+    fontSize: '6rem',
+    fontFamily: " 'Oswald', sans-serif",
+    lineHeight: '6rem',
+    letterSpacing: '-0.1rem',
+    textTransform: 'uppercase',
+    marginTop: ' 1rem',
+    marginBottom: '1rem',
+  }}>{props.children}</h1>;
 
-const Headline2 = (props) => 
+const Headline2 = (props) =>
   <h3>{props.children}</h3>;
 
-const Slug = (props) => 
+const Slug = (props) =>
   <cite class='slug'>Kevin Collison<br /></cite>;
 
 const Article = (props) => <article style={{
@@ -45,7 +46,8 @@ const Article = (props) => <article style={{
   fontFamily: 'serif',
 }}>{props.children}</article>;
 
-const ArticleBody = (props) => <> {props.children} </>;
+const ArticleBody = (props) =>
+  <> {props.children} </>;
 
 class App extends Component {
   render() {
