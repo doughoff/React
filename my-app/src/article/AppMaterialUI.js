@@ -23,10 +23,9 @@ const Hammer = (props) =>
 const Headline1 = (props) =>
   <Typography variant='h1' style={{
     fontFamily: " 'Oswald', 'Roboto', sans-serif",
-    lineHeight: '5.3rem',
+    lineHeight: '5rem',
     textTransform: 'uppercase',
     fontWeight: 'bold',
-    fontWeight: 700
   }}>{props.children}</Typography>;
 
 const Headline2 = (props) =>
@@ -52,23 +51,23 @@ const BylineKCStar = (props) => {
     }}> {author || 'Staff'} 
     </Typography>
     <br/>
-    <Typography variant='subtitle2' style={{ fontStyle: 'italic' }}>
+    <Typography variant='span' style={{ fontStyle: 'italic' }}>
       {newspaper || 'The Kansas City Star'}</Typography>
     {children}
   </div>;
 }
 
 const Article = (props) =>
-  <Paper elevation={4} style={{
+  <Paper component='div' elevation={4} style={{
     fontFamily: " 'Roboto', sans-serif",
     padding: '1rem',
     width: '28rem',
     border: '1px grey solid',
-    fontFamily: 'serif',
+
   }}>{props.children}</Paper>;
 
 const ArticleBody = (props) =>
-  <Typography variant='body2' align='justify' style={{
+  <Typography variant='body2' component='div' align='justify' style={{
     fontFamily: " 'Roboto', sans-serif"
   }}>
     {props.children} </Typography>;
