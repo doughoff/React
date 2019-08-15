@@ -74,7 +74,7 @@ class App extends Component {
             fullWidth={true}
             onMouseEnter={this.onMouseEnter}
             onMouseLeave={this.onMouseLeave}
-            onClick={(e) => this.onClick(e, 'abc','def')} 
+            onClick={(e) => this.onClick(e, 'abc', 'def')}
           >
             RED
           </Button>

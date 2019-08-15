@@ -4,19 +4,18 @@ import { Paper, Typography } from '@material-ui/core';
 const HammerTop = (props) =>
   <Typography color='primary' style={{
     textTransform: "uppercase",
-    fontSize: '1.3rem',
-    fontFamily: " 'Roboto', sans-serif",
+    fontWeight: 300,
   }} >{props.children} {props.withBar && '|'}</Typography>
   ;
 
 const HammerBottom = (props) =>
-  <span style={{
-    fontFamily: 'serif',
-    fontWeight: 'normal'
-  }}>{props.children}</span>;
+  <Typography paragraph={true} style={{
+    display:'block',
+    lineHeight: 1,
+  }}>{props.children}</Typography>;
 
 const Hammer = (props) =>
-  <Typography variant='h5'>
+  <Typography component='section'>
     {props.children}
   </Typography>;
 
@@ -33,13 +32,12 @@ const Headline2 = (props) =>
     fontSize: '.9rem',
     fontWeight: 'bold',
     width: '88%',
-    marginTop: '1rem',
     fontFamily: "'Verdana', sans-serif",
   }}>{props.children}</h3>;
 
 const BylineKCStar = (props) => {
   let { author, newspaper, children } = props;
-  return <div style={{
+  return <Typography component='div' style={{
     margin: '1rem 0rem',
     textAlign: 'right',
     fontFamily: " 'Roboto', sans-serif",
@@ -50,11 +48,10 @@ const BylineKCStar = (props) => {
       fontWeight: 'bold',
     }}> {author || 'Staff'} 
     </Typography>
-    <br/>
-    <Typography variant='span' style={{ fontStyle: 'italic' }}>
+    <Typography variant='body2' style={{ display: 'block', fontStyle: 'italic', lineHeight: .8 }}>
       {newspaper || 'The Kansas City Star'}</Typography>
     {children}
-  </div>;
+  </Typography>;
 }
 
 const Article = (props) =>
@@ -68,9 +65,16 @@ const Article = (props) =>
 
 const ArticleBody = (props) =>
   <Typography variant='body2' component='div' align='justify' style={{
-    fontFamily: " 'Roboto', sans-serif"
+    textIndent: '2rem'
   }}>
     {props.children} </Typography>;
+
+const DropCap = (props) => 
+  <Typography variant='h2' component='span' style={{
+    fontWeight:'bold',
+    margin: '0 .3rem 0 -2rem',
+  }}>{props.children}</Typography>
+;
 
 class App extends Component {
   render() {
@@ -89,7 +93,9 @@ class App extends Component {
         </BylineKCStar>
 
         <ArticleBody>
-          <p>AMC Entertainment lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis impedit alias, a natus id aperiam magnam velit maxime nulla autem. Neque aliquam tenetur dolorum magnam non dolores fugit ullam illo!</p>
+          <p><DropCap>
+            A
+          </DropCap>MC Entertainment lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis impedit alias, a natus id aperiam magnam velit maxime nulla autem. Neque aliquam tenetur dolorum magnam non dolores fugit ullam illo!</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis impedit alias, a natus id aperiam magnam velit maxime nulla autem. Neque aliquam tenetur dolorum magnam non dolores fugit ullam illo!</p>
         </ArticleBody>
 
