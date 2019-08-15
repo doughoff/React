@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Oswald:700);
+        article {
+            padding: 1rem;
+            width: 22rem;
+            border: 1px grey solid;
+            font-family: serif;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0rem;
+            padding: 0rem;
+        }
+        
+        h1 {
+            font-size: 6rem;
+            font-family: 'Oswald', sans-serif;
+            line-height: 6rem;
+            letter-spacing: -0.1rem;
+            text-transform: uppercase;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2.hammer .top {
+            text-transform: uppercase;
+            color: royalblue;
+            font-size: 1.3rem;
+            display: block;
+            font-family: sans-serif;
+        }
+        
+        h2.hammer {
+            letter-spacing: -0.02rem;
+        }
+        
+        h2.hammer .top:after {
+            content: ' |';
+        }
+        
+        h2.hammer .bottom {
+            font-family: serif;
+            font-weight: normal;
+        }
+        
+        h3 {
+            font-size: .9rem;
+            font-weight: bold;
+            width: 88%;
+            margin-top: 1rem;
+            font-family: 'Verdana', sans-serif;
+        }
+        
+        .slug {
+            margin: 1rem 0rem;
+            text-align: right;
+        }
+        
+        cite {
+            font-size: .8rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-style: normal;
+            display: block;
+            font-family: sans-serif;
+        }
+        
+        cite:before {
+            content: 'By ';
+            text-transform: none;
+        }
+        
+        cite:after {
+            content: 'The Kansas City Star';
+            font-style: italic;
+            text-transform: none;
+            font-weight: normal;
+        }
+        
+        article .body {
+            text-align: justify;
+        }
+        
+        article .body:first-letter {
+            float: left;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 3.3rem;
+            margin-top: -0.8rem;
+            margin-right: .4rem;
+            margin-bottom: -1.3rem;
+        }
+        
+        p {
+            margin: 0;
+        }
+        
+        p:not(:first-child) {
+            text-indent: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <article>
+            <h2 class='hammer'>
+                <span class='top'>Border War Continues</span>
+                <span class='bottom'>Tax incentives trump tradition</span>
+            </h2>
+
+            <h1>Kansas Prevails In Bid for AMC</h1>
+
+            <h3>Longtime downtown company is going to new $30 million building in southern Leawood's Park Place.</h3>
+
+            <cite class='slug'>Kevin Collison<br></cite>
+
+            <div class='body'>
+                <p>AMC Entertainment lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis impedit alias, a natus id aperiam magnam velit maxime nulla autem. Neque aliquam tenetur dolorum magnam non dolores fugit ullam illo!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis impedit alias, a natus id aperiam magnam velit maxime nulla autem. Neque aliquam tenetur dolorum magnam non dolores fugit ullam illo!</p>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>
