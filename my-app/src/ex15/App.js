@@ -25,7 +25,6 @@ import {
 } from "@material-ui/core";
 import { red, yellow, green } from "@material-ui/core/colors";
 import ExerciseHeader from "../components/ExerciseHeader";
-import styles from '../style';
 //----------------------------------- global functions
 const pluralize = (quantity, item) => {
   return `${quantity} ${item}${quantity !== 1 ? "s" : ""}`;
