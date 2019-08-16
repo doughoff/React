@@ -10,11 +10,11 @@ import {
 
 function DialogTest() {
     const [open, setOpen] = useState(false);
-    const handleClose = () => {
+    const handleClose = (e) => {
         console.log("handleClose");
         setOpen(false);
     };
-    const handleClickOpen = () => {
+    const handleClickOpen = (e) => {
         console.log("handleClickOpen");
         setOpen(true);
     };
