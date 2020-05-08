@@ -40,12 +40,11 @@ class App extends Component {
           {author.company}
         </DataGridItem>
 
-
       </Grid> // the grid container
 
     );
-  }
-}
+  } // end render
+} // end class
 
 const ExerciseHeader3 = props => (
   <Typography variant="h2" gutterBottom> 
